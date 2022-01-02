@@ -26,17 +26,6 @@ class MenusController extends Controller
         return view('menus.edit',compact(['menu']));
     }
 
-    public function update(Request $request,$id){
-        $menu= Menu::find($id);
-        $menu->update($request->all());
-        return redirect('/menus');
-    }
 
-    public function destroy($id){
-
-        $menu = Menu::find($id);
-        $menu->delete();
-        return redirect('/menus');
-    }
 }
 

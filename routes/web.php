@@ -20,3 +20,5 @@ Route::post('/menus', [MenusController::class,'store']);
 Route::get('/menus/{id}/edit', [MenusController::class,'edit']);
 Route::put('/menus/{id}' , [MenusController::class,'update']);
 Route::delete('/menus/{id}' , [MenusController::class,'destroy']);
+
+Route::get('/login', [LoginController::class,'index']);
