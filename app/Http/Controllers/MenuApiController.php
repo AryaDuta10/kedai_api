@@ -12,6 +12,12 @@ class MenuApiController extends Controller
      return response()->json(['message' => 'Success','data' => $menus]);
  }
 
+ public function show($id){
+     $menu = Menu::find($id);
+     return response()->json(['message' => 'Success' , 'data' => $menu]);
+
+ }
+
  public function store(Request $request){
     $menu = Menu::create( $request->all());
     return response()->json(['message' => 'Insert Data Sukses' , 'data' => $menu]);
